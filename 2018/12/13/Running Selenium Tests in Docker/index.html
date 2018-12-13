@@ -79,22 +79,23 @@
 
 
 
-<meta name="description" content="之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Allure 集成工具：Jenkins  运行Sele">
+<meta name="description" content="在Docker环境下运行Selenium自动化测试 之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Al">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在Docker环境下运行Selenium自动化测试">
+<meta property="og:title" content="Lillian&#39;s blog">
 <meta property="og:url" content="http://yoursite.com/2018/12/13/Running Selenium Tests in Docker/index.html">
 <meta property="og:site_name" content="Lillian&#39;s blog">
-<meta property="og:description" content="之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Allure 集成工具：Jenkins  运行Sele">
+<meta property="og:description" content="在Docker环境下运行Selenium自动化测试 之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Al">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/20181213/dockerDaemons.PNG">
 <meta property="og:image" content="http://yoursite.com/images/20181213/hubnode.PNG">
-<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/%22images/20181213/jenkinsshell.PNG%22">
-<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/%22images/20181213/jenkinsreport.PNG%22">
-<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/%22images/20181213/jenkins.PNG%22">
-<meta property="og:updated_time" content="2018-12-13T12:22:52.279Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/images/20181213/jenkinsshell.PNG">
+<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/images/20181213/jenkinsreport.PNG">
+<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/images/20181213/jenkins.PNG">
+<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/images/20181213/allure.PNG">
+<meta property="og:updated_time" content="2018-12-13T12:36:25.136Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在Docker环境下运行Selenium自动化测试">
-<meta name="twitter:description" content="之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Allure 集成工具：Jenkins  运行Sele">
+<meta name="twitter:title" content="Lillian&#39;s blog">
+<meta name="twitter:description" content="在Docker环境下运行Selenium自动化测试 之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Al">
 <meta name="twitter:image" content="http://yoursite.com/images/20181213/dockerDaemons.PNG">
 
 
@@ -131,7 +132,7 @@
 
 
 
-  <title>在Docker环境下运行Selenium自动化测试 | Lillian's blog</title>
+  <title> | Lillian's blog</title>
   
 
 
@@ -255,7 +256,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">在Docker环境下运行Selenium自动化测试</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -305,7 +306,7 @@
       
 
       
-        <blockquote>
+        <h1 id="在Docker环境下运行Selenium自动化测试"><a href="#在Docker环境下运行Selenium自动化测试" class="headerlink" title="在Docker环境下运行Selenium自动化测试"></a>在Docker环境下运行Selenium自动化测试</h1><blockquote>
 <p>之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。</p>
 </blockquote>
 <h3 id="主要框架"><a href="#主要框架" class="headerlink" title="主要框架"></a>主要框架</h3><ul>
@@ -315,13 +316,13 @@
 <li>测试报告：Allure</li>
 <li>集成工具：Jenkins</li>
 </ul>
-<h3 id="运行Selenium-Docker-image"><a href="#运行Selenium-Docker-image" class="headerlink" title="运行Selenium Docker image"></a>运行Selenium Docker image</h3><p>在我们工作中，我们所有的部署和测试环境都集中在Jenkins里面，中有一台slave已经装好了docker，所以这里就不累述安装docker的过程。<br>首先运行selenium docker的官方镜像<a href="https://hub.docker.com/r/selenium/" target="_blank" rel="noopener">docker image</a>。我选用的是Selenium Grid Hub and Node的镜像。<br><strong>Hub:</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 4444:4444  -e GRID_TIMEOUT=1800 --name myhub selenium/hub:3.14.0 -e NODE_MAX_INSTANCES=5 -e NODE_MAX_SESSION=5</span><br></pre></td></tr></table></figure>
-<p><strong><em>hub镜像</em>:</strong> selenium/hub:3.14.0<br><strong><em>-d :</em></strong> Running Containers as Daemons and it means you can run a Docker container in the background as a service.（这句话就是说可以在后台以服务的形式运行容器，在这里附上一张Docker Daemon的示意图）<br><img src="/images/20181213/dockerDaemons.PNG" alt="docker_daemon"><br><strong><em>-p :</em></strong> publish the 4444 port from the container to the host.也就是你可以通过host的4444端口来和container通信，格式是(host_port:container_port)</p>
-<p><strong>_GRID_TIMEOUT=1800:_</strong> The timeout in seconds before the hub automatically releases a node that hasn’t received any requests for more than the specified number of seconds. <a href="https://github.com/SeleniumHQ/selenium/wiki/Grid2#configuring-timeouts-version-221-required" target="_blank" rel="noopener">wiki page</a> 这个设置可以让hub在30分钟后释放一个node，如果这个node在30分钟内都没有向hub发送请求。<br><strong><em>–name</em>:</strong> 给hub起一个名字，这里的hub名字是<strong>myhub</strong><br><strong>_NODE_MAX_INSTANCES, NODE_MAX_SESSION:_</strong> The maximum number of browsers that can run in parallel on the node. This is different from the maxInstance of supported browsers.如果, NODE_MAX_INSTANCE=5，那么NODE_MAX_SESSION至少也是5</p>
-<p><strong>Node:</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 5900:5900 --name chromenode --link myhub:hub --shm-size=512m selenium/node-chrome-debug:3.14.0</span><br></pre></td></tr></table></figure></p>
-<p><strong>node镜像:</strong> selenium/node-chrome-debug:3.14.0,这是一个debug模式的node，对于初学者来说非常有用，因为这个镜像有一个VNC server，我们可以通过端口5900来看到浏览器的整个操作过程。<br><strong>-p:</strong> 这里是指定VNC的映射端口为5900.<br><strong>–link</strong>：This option can be used for a single host scenario (hub and nodes running in a single machine). 在这里就是把node（chromenode）连接到hub(myhub)上。但是这种方式并不被官方推荐，可以Using docker networking。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker network create grid</span><br><span class="line">$ docker run -d -p 4444:4444 --net grid --name selenium-hub selenium/hub:3.141.59-dubnium</span><br><span class="line">$ docker run -d --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/node-chrome:3.141.59-dubnium</span><br><span class="line">$ docker run -d --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/node-firefox:3.141.59-dubnium</span><br></pre></td></tr></table></figure></p>
-<p><strong>–shm-size:</strong> to use the host’s shared memory. 这里container用了host 512M的内存。</p>
+<h3 id="运行Selenium-Docker-image"><a href="#运行Selenium-Docker-image" class="headerlink" title="运行Selenium Docker image"></a>运行Selenium Docker image</h3><p>在我们工作中，我们所有的部署和测试环境都集中在Jenkins里面，中有一台slave已经装好了docker，所以这里就不累述安装docker的过程。<br>首先运行selenium docker的官方镜像<a href="https://hub.docker.com/r/selenium/" target="_blank" rel="noopener">docker image</a>。我选用的是Selenium Grid Hub and Node的镜像。</p>
+<h4 id="Hub"><a href="#Hub" class="headerlink" title="Hub"></a>Hub</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 4444:4444  -e GRID_TIMEOUT=1800 --name myhub selenium/hub:3.14.0 -e NODE_MAX_INSTANCES=2 -e NODE_MAX_SESSION=2</span><br></pre></td></tr></table></figure>
+<p>1.<strong><em>hub镜像</em>:</strong> selenium/hub:3.14.0<br>2.<strong><em>-d :</em></strong> Running Containers as Daemons and it means you can run a Docker container in the background as a service.（这句话就是说可以在后台以服务的形式运行容器，在这里附上一张Docker Daemon的示意图）<br><img src="/images/20181213/dockerDaemons.PNG" alt="docker_daemon"><br>3.<strong><em>-p :</em></strong> publish the 4444 port from the container to the host.也就是你可以通过host的4444端口来和container通信，格式是(host_port:container_port)</p>
+<p>3.<strong>GRID_TIMEOUT=1800:</strong> The timeout in seconds before the hub automatically releases a node that hasn’t received any requests for more than the specified number of seconds. <a href="https://github.com/SeleniumHQ/selenium/wiki/Grid2#configuring-timeouts-version-221-required" target="_blank" rel="noopener">wiki page</a> 这个设置可以让hub在30分钟后释放一个node，如果这个node在30分钟内都没有向hub发送请求。<br>4.<strong><em>–name</em>:</strong> 给hub起一个名字，这里的hub名字是<strong>myhub</strong><br>5.<strong>NODE_MAX_INSTANCES, NODE_MAX_SESSION:</strong> The maximum number of browsers that can run in parallel on the node. This is different from the maxInstance of supported browsers.如果, NODE_MAX_INSTANCE=5，那么NODE_MAX_SESSION至少也是5</p>
+<h4 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 5900:5900 --name chromenode --link myhub:hub --shm-size=512m selenium/node-chrome-debug:3.14.0</span><br></pre></td></tr></table></figure>
+<p>1.<strong>node镜像:</strong> selenium/node-chrome-debug:3.14.0,这是一个debug模式的node，对于初学者来说非常有用，因为这个镜像有一个VNC server，我们可以通过端口5900来看到浏览器的整个操作过程。<br>2.<strong>-p:</strong> 这里是指定VNC的映射端口为5900.<br>3.<strong>–link</strong>：This option can be used for a single host scenario (hub and nodes running in a single machine). 在这里就是把node（chromenode）连接到hub(myhub)上。但是这种方式并不被官方推荐，可以Using docker networking。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker network create grid</span><br><span class="line">$ docker run -d -p 4444:4444 --net grid --name selenium-hub selenium/hub:3.141.59-dubnium</span><br><span class="line">$ docker run -d --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/node-chrome:3.141.59-dubnium</span><br><span class="line">$ docker run -d --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/node-firefox:3.141.59-dubnium</span><br></pre></td></tr></table></figure></p>
+<p>4.<strong>–shm-size:</strong> to use the host’s shared memory. 这里container用了host 512M的内存。</p>
 <p><strong>查看hub和node</strong></p>
 <ul>
 <li>如果你在docker的机器上，你可以在浏览器打开<a href="http://localhost:4444/grid/console,来查看。" target="_blank" rel="noopener">http://localhost:4444/grid/console,来查看。</a></li>
@@ -339,12 +340,12 @@
 <p><strong>Dockerfile：</strong><br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/app</span></span><br><span class="line"><span class="bash">COPY requirements.txt ./</span></span><br><span class="line"><span class="bash">RUN pip install --no-cache-dir -r requirements.txt</span></span><br><span class="line"><span class="bash">COPY . .</span></span><br><span class="line"><span class="bash">COPY ./environment ./result</span></span><br><span class="line"><span class="bash">CMD [ <span class="string">"pytest"</span>,<span class="string">"testcase/"</span>,<span class="string">"--alluredir=result"</span>,<span class="string">"-n"</span>,<span class="string">"2"</span>,<span class="string">"--dist=loadfile"</span>,<span class="string">"--tx"</span>,<span class="string">"2*popen//python=python3.7"</span>]</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>requirements.txt file:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pytest==3.5.1</span><br><span class="line">pytest-ordering==0.5</span><br><span class="line">selenium==3.11.0</span><br><span class="line">allure-pytest==2.3.2b1</span><br><span class="line">allure-python-commons==2.3.2b1</span><br><span class="line">pytest-xdist==1.23.2</span><br></pre></td></tr></table></figure></p>
 <p><strong>Run python image:</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -i --rm  --name kore_selenium -v <span class="variable">$WORKSPACE</span>:/usr/src/app  kore-python</span><br></pre></td></tr></table></figure></p>
-<h3 id="Jenkins配置"><a href="#Jenkins配置" class="headerlink" title="Jenkins配置"></a>Jenkins配置</h3><p><strong>Build shell 命令如图：</strong><br><img src="&quot;images/20181213/jenkinsshell.PNG&quot;" alt="jenkinsbuild"><br><strong>Report 配置：</strong><br><img src="&quot;images/20181213/jenkinsreport.PNG&quot;" alt="jenkinsreport"><br><strong>Jenkins 界面图</strong><br><img src="&quot;images/20181213/jenkins.PNG&quot;" alt="jenkinsboard"></p>
+<h3 id="Jenkins配置"><a href="#Jenkins配置" class="headerlink" title="Jenkins配置"></a>Jenkins配置</h3><p><strong>Build shell 命令如图：</strong><br><img src="images/20181213/jenkinsshell.PNG" alt="jenkinsbuild"><br><strong>Report 配置：</strong><br><img src="images/20181213/jenkinsreport.PNG" alt="jenkinsreport"><br><strong>Jenkins 界面图</strong><br><img src="images/20181213/jenkins.PNG" alt="jenkinsboard"><br><strong>Allure Report</strong><br><img src="images/20181213/allure.PNG" alt="jenkinsboard"></p>
 <p><strong>tips:</strong> 在Jenkins上allure report运行的时候，results的Path的文件夹创建者必须是Jenkins，所以不能在docker内部产生这个文件，不然会报permission deny的错。解决这个问题的方法就是result文件夹在‘Build Shell’命令行里创建。见上‘Build Shell’的图。</p>
 <h3 id="Docker的一些常用命令"><a href="#Docker的一些常用命令" class="headerlink" title="Docker的一些常用命令"></a>Docker的一些常用命令</h3><ol>
-<li>docker stop <container id="" or="" container="" name="">: 让正在运行的container停下来。</container></li>
-<li>docker rm <container id="" or="" container="" name="">: 删除 container</container></li>
-<li>docker rmi <image id="" or="" image="" name="">: 删除 docker image</image></li>
+<li>docker stop XXXX(container id or container name): 让正在运行的container停下来。</li>
+<li>docker rm XXX(container id or container name): 删除 container</li>
+<li>docker rmi XXX (image id or image name):删除 docker image</li>
 <li>docker ps -a :查阅container的状态</li>
 </ol>
 <p>References:<br>[1] <a href="https://www.blazemeter.com/blog/how-to-run-selenium-tests-in-docker" target="_blank" rel="noopener">https://www.blazemeter.com/blog/how-to-run-selenium-tests-in-docker</a><br>[2] <a href="https://github.com/SeleniumHQ/docker-selenium" target="_blank" rel="noopener">https://github.com/SeleniumHQ/docker-selenium</a><br>[3] <a href="https://www.manning.com/books/docker-in-practice" target="_blank" rel="noopener">https://www.manning.com/books/docker-in-practice</a><br>[4] <a href="https://docs.qameta.io/allure/#_jenkins" target="_blank" rel="noopener">https://docs.qameta.io/allure/#_jenkins</a></p>
@@ -494,7 +495,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要框架"><span class="nav-number">1.</span> <span class="nav-text">主要框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行Selenium-Docker-image"><span class="nav-number">2.</span> <span class="nav-text">运行Selenium Docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-测试脚本"><span class="nav-number">3.</span> <span class="nav-text">Python 测试脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Docker-image"><span class="nav-number">4.</span> <span class="nav-text">Python Docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jenkins配置"><span class="nav-number">5.</span> <span class="nav-text">Jenkins配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker的一些常用命令"><span class="nav-number">6.</span> <span class="nav-text">Docker的一些常用命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#在Docker环境下运行Selenium自动化测试"><span class="nav-number">1.</span> <span class="nav-text">在Docker环境下运行Selenium自动化测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要框架"><span class="nav-number">1.0.1.</span> <span class="nav-text">主要框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行Selenium-Docker-image"><span class="nav-number">1.0.2.</span> <span class="nav-text">运行Selenium Docker image</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hub"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">Hub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Node"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">Node</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-测试脚本"><span class="nav-number">1.0.3.</span> <span class="nav-text">Python 测试脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Docker-image"><span class="nav-number">1.0.4.</span> <span class="nav-text">Python Docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jenkins配置"><span class="nav-number">1.0.5.</span> <span class="nav-text">Jenkins配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker的一些常用命令"><span class="nav-number">1.0.6.</span> <span class="nav-text">Docker的一些常用命令</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
