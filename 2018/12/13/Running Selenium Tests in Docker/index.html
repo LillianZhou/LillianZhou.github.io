@@ -79,23 +79,23 @@
 
 
 
-<meta name="description" content="在Docker环境下运行Selenium自动化测试 之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Al">
+<meta name="description" content="之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Allure 集成工具：Jenkins  运行Sele">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lillian&#39;s blog">
+<meta property="og:title" content="在Docker环境下运行Selenium自动化测试">
 <meta property="og:url" content="http://yoursite.com/2018/12/13/Running Selenium Tests in Docker/index.html">
 <meta property="og:site_name" content="Lillian&#39;s blog">
-<meta property="og:description" content="在Docker环境下运行Selenium自动化测试 之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Al">
+<meta property="og:description" content="之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Allure 集成工具：Jenkins  运行Sele">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/20181213/dockerDaemons.PNG">
 <meta property="og:image" content="http://yoursite.com/images/20181213/hubnode.PNG">
-<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/images/20181213/jenkinsshell.PNG">
-<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/images/20181213/jenkinsreport.PNG">
-<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/images/20181213/jenkins.PNG">
-<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/images/20181213/allure.PNG">
-<meta property="og:updated_time" content="2018-12-13T12:36:25.136Z">
+<meta property="og:image" content="http://yoursite.com/images/20181213/jenkinsshell.PNG">
+<meta property="og:image" content="http://yoursite.com/images/20181213/jenkinsreport.PNG">
+<meta property="og:image" content="http://yoursite.com/images/20181213/jenkins.PNG">
+<meta property="og:image" content="http://yoursite.com/images/20181213/allure.PNG">
+<meta property="og:updated_time" content="2018-12-13T12:51:02.593Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lillian&#39;s blog">
-<meta name="twitter:description" content="在Docker环境下运行Selenium自动化测试 之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Al">
+<meta name="twitter:title" content="在Docker环境下运行Selenium自动化测试">
+<meta name="twitter:description" content="之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Allure 集成工具：Jenkins  运行Sele">
 <meta name="twitter:image" content="http://yoursite.com/images/20181213/dockerDaemons.PNG">
 
 
@@ -132,7 +132,7 @@
 
 
 
-  <title> | Lillian's blog</title>
+  <title>在Docker环境下运行Selenium自动化测试 | Lillian's blog</title>
   
 
 
@@ -256,7 +256,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">在Docker环境下运行Selenium自动化测试</h1>
         
 
         <div class="post-meta">
@@ -306,7 +306,7 @@
       
 
       
-        <h1 id="在Docker环境下运行Selenium自动化测试"><a href="#在Docker环境下运行Selenium自动化测试" class="headerlink" title="在Docker环境下运行Selenium自动化测试"></a>在Docker环境下运行Selenium自动化测试</h1><blockquote>
+        <blockquote>
 <p>之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。</p>
 </blockquote>
 <h3 id="主要框架"><a href="#主要框架" class="headerlink" title="主要框架"></a>主要框架</h3><ul>
@@ -340,7 +340,7 @@
 <p><strong>Dockerfile：</strong><br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/app</span></span><br><span class="line"><span class="bash">COPY requirements.txt ./</span></span><br><span class="line"><span class="bash">RUN pip install --no-cache-dir -r requirements.txt</span></span><br><span class="line"><span class="bash">COPY . .</span></span><br><span class="line"><span class="bash">COPY ./environment ./result</span></span><br><span class="line"><span class="bash">CMD [ <span class="string">"pytest"</span>,<span class="string">"testcase/"</span>,<span class="string">"--alluredir=result"</span>,<span class="string">"-n"</span>,<span class="string">"2"</span>,<span class="string">"--dist=loadfile"</span>,<span class="string">"--tx"</span>,<span class="string">"2*popen//python=python3.7"</span>]</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>requirements.txt file:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pytest==3.5.1</span><br><span class="line">pytest-ordering==0.5</span><br><span class="line">selenium==3.11.0</span><br><span class="line">allure-pytest==2.3.2b1</span><br><span class="line">allure-python-commons==2.3.2b1</span><br><span class="line">pytest-xdist==1.23.2</span><br></pre></td></tr></table></figure></p>
 <p><strong>Run python image:</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -i --rm  --name kore_selenium -v <span class="variable">$WORKSPACE</span>:/usr/src/app  kore-python</span><br></pre></td></tr></table></figure></p>
-<h3 id="Jenkins配置"><a href="#Jenkins配置" class="headerlink" title="Jenkins配置"></a>Jenkins配置</h3><p><strong>Build shell 命令如图：</strong><br><img src="images/20181213/jenkinsshell.PNG" alt="jenkinsbuild"><br><strong>Report 配置：</strong><br><img src="images/20181213/jenkinsreport.PNG" alt="jenkinsreport"><br><strong>Jenkins 界面图</strong><br><img src="images/20181213/jenkins.PNG" alt="jenkinsboard"><br><strong>Allure Report</strong><br><img src="images/20181213/allure.PNG" alt="jenkinsboard"></p>
+<h3 id="Jenkins配置"><a href="#Jenkins配置" class="headerlink" title="Jenkins配置"></a>Jenkins配置</h3><p><strong>Build shell 命令如图：</strong><br><img src="/images/20181213/jenkinsshell.PNG" alt="jenkinsbuild"><br><strong>Report 配置：</strong><br><img src="/images/20181213/jenkinsreport.PNG" alt="jenkinsreport"><br><strong>Jenkins 界面图</strong><br><img src="/images/20181213/jenkins.PNG" alt="jenkinsboard"><br><strong>Allure Report</strong><br><img src="/images/20181213/allure.PNG" alt="jenkinsboard"></p>
 <p><strong>tips:</strong> 在Jenkins上allure report运行的时候，results的Path的文件夹创建者必须是Jenkins，所以不能在docker内部产生这个文件，不然会报permission deny的错。解决这个问题的方法就是result文件夹在‘Build Shell’命令行里创建。见上‘Build Shell’的图。</p>
 <h3 id="Docker的一些常用命令"><a href="#Docker的一些常用命令" class="headerlink" title="Docker的一些常用命令"></a>Docker的一些常用命令</h3><ol>
 <li>docker stop XXXX(container id or container name): 让正在运行的container停下来。</li>
@@ -495,7 +495,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#在Docker环境下运行Selenium自动化测试"><span class="nav-number">1.</span> <span class="nav-text">在Docker环境下运行Selenium自动化测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要框架"><span class="nav-number">1.0.1.</span> <span class="nav-text">主要框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行Selenium-Docker-image"><span class="nav-number">1.0.2.</span> <span class="nav-text">运行Selenium Docker image</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hub"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">Hub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Node"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">Node</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-测试脚本"><span class="nav-number">1.0.3.</span> <span class="nav-text">Python 测试脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Docker-image"><span class="nav-number">1.0.4.</span> <span class="nav-text">Python Docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jenkins配置"><span class="nav-number">1.0.5.</span> <span class="nav-text">Jenkins配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker的一些常用命令"><span class="nav-number">1.0.6.</span> <span class="nav-text">Docker的一些常用命令</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要框架"><span class="nav-number">1.</span> <span class="nav-text">主要框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行Selenium-Docker-image"><span class="nav-number">2.</span> <span class="nav-text">运行Selenium Docker image</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hub"><span class="nav-number">2.1.</span> <span class="nav-text">Hub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Node"><span class="nav-number">2.2.</span> <span class="nav-text">Node</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-测试脚本"><span class="nav-number">3.</span> <span class="nav-text">Python 测试脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Docker-image"><span class="nav-number">4.</span> <span class="nav-text">Python Docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jenkins配置"><span class="nav-number">5.</span> <span class="nav-text">Jenkins配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker的一些常用命令"><span class="nav-number">6.</span> <span class="nav-text">Docker的一些常用命令</span></a></li></ol></div>
             
 
           </div>
