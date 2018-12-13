@@ -79,13 +79,23 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lillian&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Allure 集成工具：Jenkins  运行Sele">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Docker环境下运行Selenium自动化测试">
+<meta property="og:url" content="http://yoursite.com/2018/12/13/Running Selenium Tests in Docker/index.html">
 <meta property="og:site_name" content="Lillian&#39;s blog">
+<meta property="og:description" content="之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Allure 集成工具：Jenkins  运行Sele">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/images/20181213/dockerDaemons.PNG">
+<meta property="og:image" content="http://yoursite.com/images/20181213/hubnode.PNG">
+<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/%22images/20181213/jenkinsshell.PNG%22">
+<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/%22images/20181213/jenkinsreport.PNG%22">
+<meta property="og:image" content="http://yoursite.com/2018/12/13/Running%20Selenium%20Tests%20in%20Docker/%22images/20181213/jenkins.PNG%22">
+<meta property="og:updated_time" content="2018-12-13T12:22:52.279Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lillian&#39;s blog">
+<meta name="twitter:title" content="在Docker环境下运行Selenium自动化测试">
+<meta name="twitter:description" content="之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。  主要框架 环境： Docker 语言： Python 3.7 测试框架：Pytest (插件：allure-pytest-2.5.4 , pytest-xdist , pytest-ordering) 测试报告：Allure 集成工具：Jenkins  运行Sele">
+<meta name="twitter:image" content="http://yoursite.com/images/20181213/dockerDaemons.PNG">
 
 
 
@@ -115,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/13/Running Selenium Tests in Docker/"/>
 
 
 
 
 
-  <title>Lillian's blog</title>
+  <title>在Docker环境下运行Selenium自动化测试 | Lillian's blog</title>
   
 
 
@@ -140,8 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +223,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +255,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/13/Running Selenium Tests in Docker/" itemprop="url">在Docker环境下运行Selenium自动化测试</a></h1>
+          <h1 class="post-title" itemprop="name headline">在Docker环境下运行Selenium自动化测试</h1>
         
 
         <div class="post-meta">
@@ -298,9 +305,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>之前的一篇文章记录了我怎么开发selenium的测试脚本，这一篇我想记录我如何在docker的环境里运行selenium 测试。</p>
 </blockquote>
 <h3 id="主要框架"><a href="#主要框架" class="headerlink" title="主要框架"></a>主要框架</h3><ul>
@@ -344,8 +349,6 @@
 </ol>
 <p>References:<br>[1] <a href="https://www.blazemeter.com/blog/how-to-run-selenium-tests-in-docker" target="_blank" rel="noopener">https://www.blazemeter.com/blog/how-to-run-selenium-tests-in-docker</a><br>[2] <a href="https://github.com/SeleniumHQ/docker-selenium" target="_blank" rel="noopener">https://github.com/SeleniumHQ/docker-selenium</a><br>[3] <a href="https://www.manning.com/books/docker-in-practice" target="_blank" rel="noopener">https://www.manning.com/books/docker-in-practice</a><br>[4] <a href="https://docs.qameta.io/allure/#_jenkins" target="_blank" rel="noopener">https://docs.qameta.io/allure/#_jenkins</a></p>
 
-          
-        
       
     </div>
     
@@ -362,174 +365,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/11/selenium automated tests_ pytest+allure/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lillian Zhou">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lillian's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/11/selenium automated tests_ pytest+allure/" itemprop="url">Build Selenium Tests with Pytest and allure</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-11T21:10:12+08:00">
-                2018-12-11
-              </time>
+              <a href="/2018/12/11/selenium automated tests_ pytest+allure/" rel="next" title="Build Selenium Tests with Pytest and allure">
+                <i class="fa fa-chevron-left"></i> Build Selenium Tests with Pytest and allure
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h4 id="我的日常工作"><a href="#我的日常工作" class="headerlink" title="我的日常工作"></a>我的日常工作</h4><p>我所工作的组是一个QA组，负责测试我们整个开发组所研发的所有工具的测试。在我们的日常的工作中主要负责的内容是：</p>
-<ul>
-<li>Regular QA on projects:手动测试新功能，跟踪Issue</li>
-<li>API tests: 测试项目的一些接口，由于我所参与的项目大多是Rest API, 所以我们会用到Postman,SoapUI等工具进行 API的automation测试。</li>
-<li>UI automation tests: 当项目已经有稳定的UI时，我们就会考虑开发UI的自动化测试脚本来进行regression 测试以适应软件的快速迭代。</li>
-</ul>
-<p>今天我想来分享一些我做UI automation测试的点。在我们组我们都是用selenium框架进行UI自动化测试，之前别的项目采用的是Java+TestNG+ExtentReport，如果我沿用这一套框架的话，那么我可能只需要复制其中很多模块就可以快速的构建这个测试脚本用于新的项目。但是当时我并没有这么做，主要的原因是：</p>
-<ul>
-<li>我习惯于用Python来开发自动化脚本，而且我之前有用python开发自动化测试脚本的经验。</li>
-<li>如果我用Java的那一套框架，那么很有可能我对里面的细节并没有很好的理解，而且我的大部分时间都会花在学习Java的语法上。</li>
-<li>我找到了一套可以和Java媲美的用Python来实现的一套框架，那就是：Pytest+Allure</li>
-</ul>
-<p>基于上面的这些考虑，我勇敢的向我的老板表达了我的想法。在和老板聊之前，我觉得老板有一定概率是会拒绝的，因为即使我可以用python来实现我的目标，但是这套框架对于我们组来说毕竟是新的，没有人用过，就代表着我需要花一定的学习时间来完成。在很多公司这些额外的学习时间往往是不被允许的。幸运的是，我的老板Anne Marie, 一如既往的支持了我的想法，她很鼓励我用我喜欢的方式来完成工作项目。于是我的第一步就顺利的通过了。接下来我就来详细的分享我的实现方法。</p>
-<h4 id="Pytest-a-mature-full-featured-Python-testing-tool"><a href="#Pytest-a-mature-full-featured-Python-testing-tool" class="headerlink" title="Pytest:a mature full-featured Python testing tool"></a>Pytest:a mature full-featured Python testing tool</h4><p>由于我用python的unittest框架开发过一个测试脚本，所以一开始我是打算用unittest的框架。但是在查找资料的过程中发现很多人会用pytest，抱着试一试的态度我也开始用了起了pytest。但是刚开始我还是没有完全摆脱unittest的思维，沿用了里面的setUp/tearDown方法，中间并没有发现pytest的优点，一度差点要放弃。就在我阅读文档的过程中，我发现了pytest支持Parameterizing tests,但是用unittest的框架不能用这个功能。所以最后我觉得重新写我的测试脚本，彻底放弃unittest的思维。于是这个时候我发现pytest简直太好用了。</p>
-<h5 id="why-pytest"><a href="#why-pytest" class="headerlink" title="why pytest"></a>why pytest</h5><ul>
-<li>Comprehensive online and PDF documents and comes with many tests examples： 当你开始学习的时候，你会发现有非常详细的文档可以查阅，而且有非常多的实例，这一点对于一个初学者来说简直不要太好。</li>
-<li>Powerful fixtures: 对我来说，fixtures是一个挺抽象的词的，但是大致可以理解为是一个function的意思。文档中对fixture的定义是“The purpose of test fixtures is to provide a fixed baseline upon which tests can reliably and repeatedly execute. pytest fixtures offer dramatic improvements over the classic xUnit style of setup/teardown functions”，所以可以简单的认为fixture是一些需要反复执行，而且可以试想setup/teardown发法的一类function。（后面我会详细说一下fixture）</li>
-<li>Helpful assertion message:pytest 可以用python的 assert来检查测试结果</li>
-<li>More than 500 plugins: allure-pytest-2.5.4 , pytest-xdist , pytest-ordering 这三个是我在测试中用到的插件，他们分别帮我实现产生allure报告，同时启动多个浏览器跑测试，给testcase的执行顺序排序。</li>
-</ul>
-<h5 id="Powserful-fixtures"><a href="#Powserful-fixtures" class="headerlink" title="Powserful fixtures"></a>Powserful fixtures</h5><ul>
-<li><p>fixtures as function arguments: 调用一个fixture只需要把fixture的作为参数名放到测试函数中。如</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">import</span> pytest</span><br><span class="line"><span class="meta"> @pytest.fixture</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_driver</span><span class="params">()</span>:</span></span><br><span class="line">    options = webdriver.ChromeOptions()</span><br><span class="line">    options.add_argument(<span class="string">"--start-maximized"</span>)</span><br><span class="line">    driver = webdriver.Chrome(executable_path=CHROME_DRIVER,options=options)</span><br><span class="line">    <span class="keyword">return</span> driver</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_get_driver</span><span class="params">(get_driver)</span>:</span></span><br><span class="line">    driver = get_driver</span><br><span class="line">    <span class="keyword">assert</span> driver==CHROME_DRIVER, <span class="string">'driver is not got'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Scope: run once per function, per module, per session: Possible values for scope are: function, class, module, package or session,’Within a function request for features, fixture of higher-scopes (such as session) are instantiated first than lower-scoped fixtures (such as function or class). The relative order of fixtures of same scope follows the declared order in the test function and honours dependencies between fixtures.’</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> @pytest.fixture(scope='module')</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">demo1</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   <span class="title">print</span><span class="params">(<span class="string">'demo1'</span>)</span></span></span><br><span class="line"><span class="function">@<span class="title">pytest</span>.<span class="title">fixture</span><span class="params">(scope=<span class="string">'class'</span>)</span></span></span><br><span class="line"><span class="function"> <span class="title">def</span> <span class="title">demo2</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   <span class="title">print</span><span class="params">(<span class="string">'demo2'</span>)</span></span></span><br><span class="line"><span class="function">@<span class="title">pytest</span>.<span class="title">fixture</span><span class="params">(scope=<span class="string">'function'</span>)</span></span></span><br><span class="line"><span class="function"> <span class="title">def</span> <span class="title">demo3</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   <span class="title">print</span><span class="params">(<span class="string">'demo3'</span>)</span></span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Parameterizing test: 对于很多测试来说如UI的页面，我们可能需要同时测试到不同search value下的页面，这个时候parametering就会非常好用。如下面的例子。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@pytest.fixture(scope="module",</span></span><br><span class="line">              params=[<span class="string">"pytest"</span>, <span class="string">"selenium"</span>])</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search_page</span><span class="params">(request)</span>:</span></span><br><span class="line">  search_value=request.param</span><br><span class="line">  <span class="keyword">yield</span> search_page</span><br><span class="line">  print(<span class="string">"finalizing &#123;&#125;"</span>.format(search_value)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Modularity: fixtures can use fixtures： fixture也可以用其它fixture就像test function用fixture一样，这样会帮助我们实现代码的模块化 如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@pytest.fixture(scope='module')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_driver</span><span class="params">()</span>:</span></span><br><span class="line">   driver=<span class="string">'Chrome'</span></span><br><span class="line">   <span class="keyword">return</span> driver</span><br><span class="line"><span class="meta">@pytest.fixture(scope="module",</span></span><br><span class="line">               params=[<span class="string">"pytest"</span>, <span class="string">"selenium"</span>])</span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">search_page</span><span class="params">(get_driver, request)</span>:</span></span><br><span class="line">   search_driver=get_driver</span><br><span class="line">   search_value=request.param</span><br><span class="line">   <span class="keyword">yield</span> search_page</span><br><span class="line">   print(<span class="string">"finalizing &#123;&#125;"</span>.format(search_value)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Powserful conftest.py:当有的fixture可以被很多test function运用的时候可以把该fixture放到一个叫‘conftest.py’的文件里面，这样的话你不需要import就可以直接调用里面的fixture。同时你可以有多个conftest.py在不同的子目录中。</p>
-</li>
-</ul>
-<h4 id="allure-pytest"><a href="#allure-pytest" class="headerlink" title="allure-pytest"></a>allure-pytest</h4><p>接下来我想聊一聊测试报告的事。在我第一次写python脚本的时候我用的是unittest+html testrunner,当时就觉得生成的报告很清晰，只需要人为的用‘print’就可以在报告里面看到一些case的细节。但是在做UI自动化的时候，我觉得那样的报告并不是很适合，因为UI很多适合需要有截图来向测试人员展示出错的地方。而且，UI测试往往是由很多个步骤组成的，这时候一个‘self-documented’报告就显得特别适合。Allure的report就是这样一个报告。allure的主要优点在于：</p>
-<ul>
-<li>@allure.step: The first and probably most important aspect of the Allure report is that it allows to get a very detailed step-by-step representation of every test invocation. This is made possible with @allure.step decorator that adds invocation of the annotated method or function with provided arguments to the report.</li>
-<li>allure.attach:Reports can display many different types of provided attachments that can complement a test, step or fixture result. Attachments can be created either with invocation of allure.attach(body, name, attachment_type, extension)</li>
-<li>allure.story, allure.feature</li>
-</ul>
-<p>好的我的第一篇文章写完了，虽然有一些乱，但是希望能对看到的人有帮助，也希望我以后能多进步。同时我还写了一个demo，感兴趣的人可以看看 <a href="https://github.com/LillianZhou/Selenium_Test" target="_blank" rel="noopener">https://github.com/LillianZhou/Selenium_Test</a><br>参考资料：<br>[1] <a href="https://docs.pytest.org/en/latest/contents.html#toc" target="_blank" rel="noopener">https://docs.pytest.org/en/latest/contents.html#toc</a><br>[2] <a href="https://docs.qameta.io/allure/#_pytest" target="_blank" rel="noopener">https://docs.qameta.io/allure/#_pytest</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -539,10 +396,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -550,6 +408,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -570,8 +432,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -613,6 +484,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要框架"><span class="nav-number">1.</span> <span class="nav-text">主要框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行Selenium-Docker-image"><span class="nav-number">2.</span> <span class="nav-text">运行Selenium Docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-测试脚本"><span class="nav-number">3.</span> <span class="nav-text">Python 测试脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Docker-image"><span class="nav-number">4.</span> <span class="nav-text">Python Docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jenkins配置"><span class="nav-number">5.</span> <span class="nav-text">Jenkins配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker的一些常用命令"><span class="nav-number">6.</span> <span class="nav-text">Docker的一些常用命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -746,6 +633,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
